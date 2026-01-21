@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "281754873407",
+    "project_id": "mubielist",
+    "storage_bucket": "mubielist.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281754873407:android:e9be3b382caf321739528a",
+        "android_client_info": {
+          "package_name": "com.example.movie_apps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHOi1_giaupEASKRiH9J2vqFOMEO4Rjyw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
