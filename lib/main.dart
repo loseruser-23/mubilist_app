@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'loginpage.dart';
-import 'registerpage.dart';
+import 'package:movie_apps/halaman_utama.dart';
+import 'authentication/loginpage.dart';
+import 'authentication/registerpage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
+import 'services/api_service_cuaca.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: const LoginPage(),
+      home: const HalUt(),
       debugShowCheckedModeBanner: false,
     );
   }

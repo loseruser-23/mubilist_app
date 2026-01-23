@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:movie_apps/loginpage.dart';
+import 'package:movie_apps/authentication/loginpage.dart';
 import 'package:flutter/gestures.dart';
 import 'package:get/get.dart';
 
@@ -25,7 +25,7 @@ class _RegisterpageState extends State<Registerpage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(top: 100),
+          padding: const EdgeInsets.symmetric(vertical: 120, horizontal: 20),
           child: Center(
             child: Column(
               children: [

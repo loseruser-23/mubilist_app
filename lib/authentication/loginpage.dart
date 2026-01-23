@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'registerpage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'halaman_utama.dart';
+import '../halaman_utama.dart';
 import 'package:get/get.dart';
 
 class LoginPage extends StatefulWidget {
@@ -22,12 +22,12 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(top: 80),
+          padding: const EdgeInsets.symmetric(vertical: 100, horizontal: 20),
           child: Center(
             child: Column(
               children: [
                 Text(
-                  'What Movies are on Today?',
+                  'GET TICKET EASY',
                   style: GoogleFonts.outfit(
                     fontSize: 26,
                     fontWeight: FontWeight.bold,
@@ -135,7 +135,6 @@ class _LoginPageState extends State<LoginPage> {
                       } catch (e) {
                         print(e);
 
-                        // Tangani kesalahan login, misalnya tampilkan pesan error
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             content: Text(
