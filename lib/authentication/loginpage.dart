@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:movie_apps/navbar/profilepage.dart';
 import 'registerpage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../halaman_utama.dart';
@@ -67,10 +68,10 @@ class _LoginPageState extends State<LoginPage> {
                         child: TextField(
                           controller: emailController,
                           decoration: InputDecoration(
-                            prefixIcon: Icon(Icons.alternate_email),
+                            prefixIcon: Icon(Icons.email_outlined),
                             fillColor: Colors.white,
                             filled: true,
-                            hintText: 'Username',
+                            hintText: 'Email',
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(12),
                               borderSide: BorderSide(color: Colors.white),
@@ -130,7 +131,7 @@ class _LoginPageState extends State<LoginPage> {
                               password: password,
                             );
 
-                        Get.to(const HalUt());
+                        Get.to(ProfilePage());
   
                       } catch (e) {
                         print(e);

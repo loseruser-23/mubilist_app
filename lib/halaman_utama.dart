@@ -5,8 +5,8 @@ import 'services/data_cuaca.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'authentication/loginpage.dart';
-import 'navbar/homepage.dart';
-import 'navbar/newspage.dart';
+import 'navbar/searchpage.dart';
+import 'navbar/homespage.dart';
 import 'navbar/profilepage.dart';
 
 class HalUt extends StatefulWidget {
@@ -20,13 +20,12 @@ class _HalUtState extends State<HalUt> {
   final ApiServiceCuaca apiServiceCuaca = ApiServiceCuaca();
   late Future<DataCuaca> futureDataCuaca;
   final FirebaseAuth _auth = FirebaseAuth.instance;
-  int _currentIndex = 0;
+  int _currentIndex = 1;
 
   final List<Widget> _pages = [
-    // Tambahkan halaman-halaman lain di sini
-    const HomePage(),
-    const SearchPage(),
-    const ProfilePage(),
+    SearchPage(),
+    HomePage(),
+    ProfilePage(),
   ];
 
   @override
@@ -81,9 +80,9 @@ class _HalUtState extends State<HalUt> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: _onItemTapped,
-        items: const [
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.article), label: 'News'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
         selectedItemColor: const Color.fromARGB(255, 245, 179, 1),
@@ -131,13 +130,13 @@ class _HalUtState extends State<HalUt> {
             Get.to(LoginPage());
           },
         ),
-         SizedBox(width: 5),
-        IconButton(
-          icon: const Icon(Icons.notifications),
-          onPressed: () async {
-            Get.to(LoginPage());
-          }
-        )
+        SizedBox(width: 5),
+        Expanded(
+          child: IconButton(
+            icon: const Icon(Icons.notifications),
+            onPressed: () {},
+          ),
+        ),
       ],
     );
   }

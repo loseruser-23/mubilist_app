@@ -19,6 +19,7 @@ Map<String, dynamic> _$MovieResponseToJson(MovieResponse instance) =>
 Movie _$MovieFromJson(Map<String, dynamic> json) => Movie(
   id: (json['id'] as num).toInt(),
   title: json['title'] as String,
+  overview: json['overview'] as String?,
   posterPath: json['poster_path'] as String,
   releaseDate: json['release_date'] as String?,
   voteAverage: (json['voteAverage'] as num?)?.toDouble() ?? 0.0,
@@ -27,6 +28,7 @@ Movie _$MovieFromJson(Map<String, dynamic> json) => Movie(
 Map<String, dynamic> _$MovieToJson(Movie instance) => <String, dynamic>{
   'id': instance.id,
   'title': instance.title,
+  'overview': instance.overview,
   'poster_path': instance.posterPath,
   'release_date': instance.releaseDate,
   'voteAverage': instance.voteAverage,
