@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
             children: [
               Container(
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: const Color.fromARGB(255, 198, 40, 40),
                   borderRadius: BorderRadius.circular(15),
                   boxShadow: [
                     BoxShadow(
@@ -57,8 +57,8 @@ class _HomePageState extends State<HomePage> {
                               ),
                               Text(
                                 'Latest',
-                                style: GoogleFonts.outfit(
-                                  color: Colors.black,
+                                style: GoogleFonts.poppins(
+                                  color: Colors.white,
                                   fontSize: 16,
                                 ),
                               ),
@@ -78,8 +78,8 @@ class _HomePageState extends State<HomePage> {
                               ),
                               Text(
                                 'Box Office',
-                                style: GoogleFonts.outfit(
-                                  color: Colors.black,
+                                style: GoogleFonts.poppins(
+                                  color: Colors.white,
                                   fontSize: 16,
                                 ),
                               ),
@@ -99,8 +99,8 @@ class _HomePageState extends State<HomePage> {
                               ),
                               Text(
                                 'News',
-                                style: GoogleFonts.outfit(
-                                  color: Colors.black,
+                                style: GoogleFonts.poppins(
+                                  color: Colors.white,
                                   fontSize: 16,
                                 ),
                               ),
@@ -120,8 +120,8 @@ class _HomePageState extends State<HomePage> {
                               ),
                               Text(
                                 'Theater',
-                                style: GoogleFonts.outfit(
-                                  color: Colors.black,
+                                style: GoogleFonts.poppins(
+                                  color: Colors.white,
                                   fontSize: 16,
                                 ),
                               ),
@@ -141,8 +141,8 @@ class _HomePageState extends State<HomePage> {
                               ),
                               Text(
                                 'Tickets',
-                                style: GoogleFonts.outfit(
-                                  color: Colors.black,
+                                style: GoogleFonts.poppins(
+                                  color: Colors.white,
                                   fontSize: 16,
                                 ),
                               ),
@@ -162,8 +162,8 @@ class _HomePageState extends State<HomePage> {
                               ),
                               Text(
                                 'Others',
-                                style: GoogleFonts.outfit(
-                                  color: Colors.black,
+                                style: GoogleFonts.poppins(
+                                  color: Colors.white,
                                   fontSize: 16,
                                 ),
                               ),

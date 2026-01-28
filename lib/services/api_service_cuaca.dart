@@ -1,10 +1,11 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'data_cuaca.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';  
 
 class ApiServiceCuaca {
-  static const String _apiKey = '8f1fbbee1f26bfd6432eae8adc7279b8';
-  static const String _url = 'https://api.openweathermap.org/data/2.5/weather';
+  static final String _apiKey = dotenv.env['API_CUACA_KEY'] ?? 'your_default_api_key tidak ditemukan';
+  static final String _url = dotenv.env['API_CUACA_URL'] ?? 'Url Cuaca tidak ditemukan';
 
   Future<DataCuaca> fetchWeather(String cityName) async {
     final response = await http.get(

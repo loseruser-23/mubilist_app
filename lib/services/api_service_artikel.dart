@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:movie_apps/models/newsmodel.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class ApiServiceArtikel {
-  static String _apiKey = '8fcba67537424ea78e2c2d5c89a14c49';
-  static String _url = 'https://newsapi.org/v2';
-
+  static String _apiKey = dotenv.env['API_ARTIKEL_KEY'] ?? 'your_default_api_key';
+  static String _url = dotenv.env['API_ARTIKEL_URL'] ?? 'url tidak ditemukan';
   Future<List<Artikel>> fetchMovieNews() async {
     final Uri uri = Uri.parse('$_url/everything');
     final Map<String, String> parameters = {

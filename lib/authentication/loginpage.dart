@@ -131,7 +131,7 @@ class _LoginPageState extends State<LoginPage> {
                               password: password,
                             );
 
-                        Get.to(ProfilePage());
+                        Get.offAll(const HalUt(initialIndex: 2));
   
                       } catch (e) {
                         print(e);

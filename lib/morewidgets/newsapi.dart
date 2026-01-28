@@ -67,7 +67,10 @@ class _NewsCardState extends State<NewsCard> {
                                 article.urlToImage!,
                                 width: 100,
                                 fit: BoxFit.cover,
-                              )
+                                errorBuilder: (context, error, stackTrace) =>
+                                    Icon(Icons.broken_image,
+                                        size: 50, color: Colors.grey),
+                            )
                             : null,
                         title: Text(
                           article.title ?? 'No Title',

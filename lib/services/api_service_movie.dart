@@ -1,11 +1,12 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:movie_apps/models/movie_model.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';  
 
 class ApiServiceMovie {
-  static String _url = 'https://api.themoviedb.org/3';
-  static String _apiKey = 'b28db4d05616a193ddbb47391f310a6c';
-  static String _imageBaseUrl = 'https://image.tmdb.org/t/p/w500';
+  static final String _url = dotenv.env['API_MOVIE_URL'] ?? 'URL tidak ditemukan';
+  static final String _apiKey = dotenv.env['API_MOVIE_KEY'] ?? 'API KEY tidak ditemukan';
+  static final String _imageBaseUrl = dotenv.env['API_MOVIE_BASEURL' ] ?? 'IMAGE tidak ditemukan';
 
   Future<List<Movie>> fetchNowPlayingMovies() async {
     final response = await http.get(

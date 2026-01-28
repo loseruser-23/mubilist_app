@@ -10,7 +10,8 @@ import 'navbar/homespage.dart';
 import 'navbar/profilepage.dart';
 
 class HalUt extends StatefulWidget {
-  const HalUt({super.key});
+  final int? initialIndex;
+  const HalUt({super.key, this.initialIndex});
 
   @override
   State<HalUt> createState() => _HalUtState();
@@ -31,6 +32,10 @@ class _HalUtState extends State<HalUt> {
   @override
   void initState() {
     super.initState();
+    if (widget.initialIndex != null) {
+      _currentIndex = widget.initialIndex!;
+    }
+
     futureDataCuaca = apiServiceCuaca.fetchWeather('Palembang');
   }
 
