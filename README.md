@@ -13,5 +13,6 @@ merupakan Final Project Kelas Flutter Batch 8
 7. kemudian di AppBar terdapat logo account dan notifikasi, yang dimana IconButton account mengarahkan pada halaman login yang authentikasinya menggunakan Firebase Auth,
 
 ## Mockup Figma
+https://www.figma.com/design/gMlbypss8ktCPvHfqPK90y/mubielist-app?node-id=0-1&t=hYZaddiM5TrCxBwW-1
 
 ## Video
