@@ -16,3 +16,4 @@ merupakan Final Project Kelas Flutter Batch 8
 https://www.figma.com/design/gMlbypss8ktCPvHfqPK90y/mubielist-app?node-id=0-1&t=hYZaddiM5TrCxBwW-1
 
 ## Video
+https://youtube.com/shorts/H25blt9wAtA?si=r4CV9JTDNZPmXuw4
